@@ -5,8 +5,12 @@ models:
     description: Staged customer data from our jaffle shop app.
     columns: 
       - name: customer_id
+<<<<<<< HEAD
         description: The primary key for customers.
         tests:
+=======
+        data_tests:
+>>>>>>> 95ae89c490878343222eec31e51c2d6294f4ab07
           - unique
           - not_null
 
@@ -14,6 +18,7 @@ models:
     description: Staged order data from our jaffle shop app.
     columns: 
       - name: order_id
+<<<<<<< HEAD
         description: Primary key for orders.
         tests:
           - unique
@@ -21,6 +26,13 @@ models:
       - name: status
         description: '{{ doc("order_status") }}'
         tests:
+=======
+        data_tests:
+          - unique
+          - not_null
+      - name: status
+        data_tests:
+>>>>>>> 95ae89c490878343222eec31e51c2d6294f4ab07
           - accepted_values:
               values:
                 - completed
